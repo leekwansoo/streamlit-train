@@ -39,7 +39,7 @@ st.write(user)
 # store items into a csv file 
 to_csv = trains
 keys = to_csv[0].keys()
-field_names =["_id", "date", "user", "pushup", "stomach","squat", "arm", "uplift", "upheel", "kick_on_chair","spreading_thigh"]
+field_names =["_id", "date", "user", "pushup", "stomach","squat", "arm", "uplift", "upheel"]
 with open('trains.csv', 'w', newline='') as output_file:
     dict_writer = csv.DictWriter(output_file, fieldnames=field_names)
     dict_writer.writeheader()
