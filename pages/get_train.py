@@ -4,7 +4,7 @@ import streamlit as st
 import pymongo
 import pandas as pd 
 import csv
-from trace_train import trace_train
+from pages.trace_train import trace_train
 # Initialize connection.
 # Uses st.cache_resource to only run once.
 
@@ -28,10 +28,11 @@ def get_data():
 
 trains = get_data()
 
-# Print results.
+user = trains[0]['user']
+st.write(user)
 #for item in trains:
-    #st.write(item)
-    #st.write(f"{item['date']} :   pushup :{item['pushup']}, squat :{item['squat']} ")
+    #st.write(item['user'])
+    #st.write(f"{item['date']} :   user :{item['user']}, squat :{item['squat']} ")
 
 #st.write(trains)   
 

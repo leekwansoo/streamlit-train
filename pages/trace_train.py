@@ -11,8 +11,9 @@ def trace_train():
 
     # creating dictreader object
     file = csv.DictReader(filename)
-    
-    # creating empty lists
+    user = "kim1"
+    print(user)
+        # creating empty lists
     pushup = []
     stomach = []
     squat = []
@@ -42,7 +43,7 @@ def trace_train():
         column_config={
             "name": "Train Name",
             "daily_history": st.column_config.LineChartColumn(
-                "Daily_Record", y_min=0, y_max=20
+                "Daily_Record", y_min=0, y_max=20, width="large"
             ),
         },
         hide_index=True,
