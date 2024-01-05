@@ -1,7 +1,11 @@
 from pymongo import MongoClient
-# Replace the uri string with your MongoDB deployment's connection string.
-uri = "mongodb+srv://admin:james@cluster0.ujzjm.mongodb.net/todoapp?retryWrites=true&w=majority"
-client = MongoClient(uri)
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+URI = os.getenv("URI")
+client = MongoClient(URI)
 # database and collection code goes here
 db = client.todoapp
 coll = db.trains
